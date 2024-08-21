@@ -34,6 +34,6 @@ app.use("/api/v1/*", jwt({ secret: Bun.env.JWT_SECRET! }));
 
 // API Router
 app.get("/", (ctx) => ctx.json({ message: "Hello! Bun + Hono" }));
-app.route("/", router);
+app.route("/api", router);
 
 export default app;
